@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>REGISTRO</title>
+    <!-- meta -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- styles -->
+    <link
+      href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
+      rel="stylesheet"
+    >
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    {% block css %}{% endblock %}
+  </head>
+  <body>
+    <br>
+    <div class="container">
+    <form action="/upp01" method="POST">
+
+      <div class="field">
+        <label class="label">Nombre</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input is-success" name="name" type="text" placeholder="Ingrese su Producto">
+          <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </div>
+      </div>
+
+
+      <div class="field">
+        <label class="label">Cantidad</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input is-success" name="stock" type="number" placeholder="Ingrese el Stock">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Precio</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input is-success" name="price" type="number" placeholder="Ingrese el Precio">
+          <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </div>
+      </div>
+
+          <br>
+          <br>
+
+      <input
+        type="submit" class="button is-link is-fullwidth"
+        value="Registrar">
+    </form>
+    </div>
+  </body>
+</html>
