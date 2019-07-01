@@ -56,12 +56,12 @@
       </div>
     </nav>
     <!--  -->
-    <div class="container">
+    <div class="container-fluid">
       <div class="columns">
 
-        <div class="column">
+        <div class="column is-one-quarter">
           <br>
-          <h1 class="title">Todos los productos</h1>
+          <h3 class="title">Todos los productos</h3>
           <hr>
         <form action="/p01" method="POST">
 
@@ -114,7 +114,7 @@
             value="Registrar">
         </form>
         </div>
-        <div class="column">
+        <div class="column is-one-quarter">
           <br>
           <h1 class="title">Todos los Proveedores</h1>
           <hr>
@@ -168,7 +168,7 @@
             value="Registrar">
         </form>
         </div>
-        <div class="column">
+        <div class="column is-one-quarter">
           <br>
           <h1 class="title">Todos los Trabajadores</h1>
           <hr>
@@ -209,7 +209,7 @@
             value="Registrar">
         </form>
         </div>
-        <div class="column">
+        <div class="column is-one-quarter">
           <br>
           <h1 class="title">Todas las Sucursales</h1>
           <hr>
@@ -263,13 +263,15 @@
             value="Registrar">
         </form>
         </div>
+      </div>
+      <div class="container-fluid">
         <br>
-        <hr>
-          {% if products, providers, workers, subsidiary %}
-          <article>
 
+          {% if products, providers, workers, subsidiary %}
+
+      <div class="columns">
+       <div class="column is-one-quarter">
               <p>Inventario</p>
-       <div>
 
          <table class="table is-bordered is-half">
            <thead>
@@ -288,16 +290,18 @@
                <td>{{productos.name}}</td>
                <td>{{productos.stock}}</td>
                <td>{{productos.price}}</td>
+               <td><li><a class="button is-primary" href="formp01/{{productos.id}}">Update</a></li></td>
+               <td><li><a class="button is-danger" href="delp01/{{productos.id}}">Eliminar</a></li></td>
 
 
              </tr {% endfor %}>
            </tbody>
          </table>
-      <div>
+      </div>
+      <div class="column is-one-quarter">
 
         <p>Proveedores</p>
 
-      </div>
          <table class="table is-bordered">
            <thead>
              <tr>
@@ -321,11 +325,10 @@
            </tbody>
          </table>
 
-         <div>
+       </div>
+         <div class="column is-one-quarter">
 
            <p>Trabajadores</p>
-
-         </div>
 
          <table class="table is-bordered">
            <thead>
@@ -347,12 +350,11 @@
              </tr {% endfor %}>
            </tbody>
          </table>
+         </div>
 
-         <div>
+         <div class="column is-one-quarter">
 
            <p>Sucursales</p>
-
-         </div>
 
          <table class="table is-bordered">
            <thead>
@@ -376,7 +378,7 @@
              </tr {% endfor %}>
            </tbody>
          </table>
-
+         </div>
 
 
 <!--              <ol>
@@ -384,15 +386,15 @@
                   <li>{{user.username}}</li>
                 {% endfor %}
               </ol>-->
-            </div>
-          </article>
+         </div>
+
 
           {% else %}
             <p>No hay usuarios!</p>
           {% endif %}
         </div>
       </div>
-    </div>
+
     </script>
     {% block js %}{% endblock %}
   </body>

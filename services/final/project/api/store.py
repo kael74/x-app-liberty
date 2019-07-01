@@ -155,7 +155,7 @@ def add_subsidiary():
 @store_blueprint.route('/formp01/<id>', methods=['GET'])
 def show_form(id):
     p01_id= P01.query.filter_by(id=int(id)).first()
-    return render_template('upp01.html', id=p01_id)
+    return render_template('upp01.html', products=p01_id)
 
 
 @store_blueprint.route('/upp01/<id>', methods=['POST', 'GET'])

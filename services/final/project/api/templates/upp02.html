@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Editar</title>
+    <title>REGISTRO</title>
     <!-- meta -->
     <meta name="description" content="">
     <meta name="author" content="">
@@ -18,15 +18,13 @@
   </head>
   <body>
     <br>
-      {% if products %}
-    <div class="container-fluid">
-
-    <form action="/upp01/{{products.id}}" method="POST">
+    <div class="container">
+    <form action="/upp01" method="POST">
 
       <div class="field">
         <label class="label">Nombre</label>
         <div class="control has-icons-left has-icons-right">
-          <input class="input is-success" name="name" type="text" placeholder="{{products.name}}">
+          <input class="input is-success" name="name" type="text" placeholder="Ingrese su Producto">
           <span class="icon is-small is-left">
             <i class="fas fa-user"></i>
           </span>
@@ -40,7 +38,7 @@
       <div class="field">
         <label class="label">Cantidad</label>
         <div class="control has-icons-left has-icons-right">
-          <input class="input is-success" name="stock" type="number" placeholder="{{products.stock}}">
+          <input class="input is-success" name="stock" type="number" placeholder="Ingrese el Stock">
           <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
           </span>
@@ -53,7 +51,7 @@
       <div class="field">
         <label class="label">Precio</label>
         <div class="control has-icons-left has-icons-right">
-          <input class="input is-success" name="price" type="number" placeholder="{{products.price}}">
+          <input class="input is-success" name="price" type="number" placeholder="Ingrese el Precio">
           <span class="icon is-small is-left">
             <i class="fas fa-user"></i>
           </span>
@@ -68,12 +66,8 @@
 
       <input
         type="submit" class="button is-link is-fullwidth"
-        value="Actualizar">
+        value="Registrar">
     </form>
     </div>
-    {% else %}
-      <a class="button is-primary" href="/">No se pudo conectar con la base de datos :c</a>
-    {% endif %}
-    {% block js %}{% endblock %}
   </body>
 </html>
